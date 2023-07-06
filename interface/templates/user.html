@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Role Selection</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("{{ url_for('static', filename='librarian.jpg') }}");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px; 
+      background-color: red;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px; 
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    h1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 80px;
+      color: #FFFDD0;
+      margin-bottom: 20px;
+    }
+    
+
+
+  </style>
+</head>
+<body>
+ <h1>Welcome User </h1>
+  <div class="button-container">
+    <button class="button" onclick="redirectTonew()">New User</button>
+    <button class="button" onclick="redirectTocontinue()">Continuing User</button>
+    <script>
+    function redirectTonew() {
+      window.location.href = '/new';
+    }
+    function redirectTocontinue() {
+      window.location.href = '/continuing';
+    }
+  
+  </script>
+  </div>
+</body>
+</html>
